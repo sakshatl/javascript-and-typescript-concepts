@@ -12,8 +12,8 @@ TypeScript is a "typed" superset of JavaScript. It is a open-source programming 
 
 1. Install Node
 2. `npm install -g typescript`
-3. Check `tsc --version` to check for the version installed on your machine
-
+3. Check `tsc --version` to check for the version installed on your machine.
+4. Run `tsc FILENAME.ts`
 
 
 
