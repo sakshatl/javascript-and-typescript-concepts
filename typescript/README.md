@@ -6,6 +6,7 @@ TypeScript is a "typed" superset of JavaScript. It is a open-source programming 
 
 1. TypeScript is just extended JavaScript. It can compile down to plain JavaScript
 2. Optional Static Typing and Type Inference: JavaScript is dynamically typed. TypeScript on the other hand adds types to JavaScript code. So errors can be identfied at the compilation step. Specifying the type is optional.
+3. It also helps us with Intellisence
 3. Rapid growth and use. There is going to be a lot of TypeScript in the world of web
 
 ## Installing TypeScript on your machine
