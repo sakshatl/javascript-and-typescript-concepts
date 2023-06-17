@@ -13,5 +13,9 @@ let listItems = document.querySelectorAll('ul.team-seven-list > li');
 listItems = Array.from(listItems);
 
 listItems.forEach((item) => {
-  console.log(item.textContent);
-})
+  if(item.classList.contains('leader')) {
+    console.log(item.textContent, "(Leader)");
+  } else {
+    console.log(item.textContent);
+  }
+});
