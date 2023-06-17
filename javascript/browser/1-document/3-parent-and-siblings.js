@@ -1,11 +1,3 @@
-// all operations on the DOM start with "document" object
-// console.log(document);
-
-// console.log(document.documentElement); // references to <html>
-// console.log(document.head); // reference to <head>
-// console.log(document.body); // reference to <body>
-
-
 // ==== PARENT AND SIBLINGS ==== 
 
 console.log(document.body.parentNode); // <html>
@@ -21,5 +13,5 @@ let head = document.head;
 console.log(head.nextElementSibling); // <body>
 console.log(body.nextElementSibling); // <null>
 
-console.log(body.previousElementSibling) // <head>
-console.log(head.nextElementSibling) // <body>
+console.log(body.previousElementSibling); // <head>
+console.log(head.nextElementSibling); // <body>
