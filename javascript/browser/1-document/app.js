@@ -1,16 +1,25 @@
-console.log(document);
+// all operations on the DOM start with "document" object
+// console.log(document);
 
-// According to the DOM every element tag is an object
-// Nested tags are the "children" on the enclosing one
-// Even the text inside a tag is an object as well
-
-const bodyObj = document.body;
-console.log(bodyObj);
-console.log(bodyObj.textContent);
+// console.log(document.documentElement); // references to <html>
+// console.log(document.head); // reference to <head>
+// console.log(document.body); // reference to <body>
 
 
-// -- element tags become the element nodes 
-// -- text becomes the text node
-// -- etc, everything inside the HTML document has a place in the DOM
+// ==== PARENT AND SIBLINGS ==== 
+
+console.log(document.body.parentNode); // <html>
+console.log(document.body.parentElement); // <html>
+
+console.log(document.body.childNodes); // Node list of all the nodes (includes text and comment nodes)
+console.log(document.body.children); // HTML collection of all the elements
 
 
+let body = document.body;
+let head = document.head;
+
+console.log(head.nextElementSibling); // <body>
+console.log(body.nextElementSibling); // <null>
+
+console.log(body.previousElementSibling) // <head>
+console.log(head.nextElementSibling) // <body>
