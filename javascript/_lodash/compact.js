@@ -7,11 +7,12 @@ function removeFalsy(arr) {
 
   for(let i = 0; i < arr.length; i++) {
     let item = arr[i];
-    if(!FALSY_VALUES.includes(item)){
+    if(FALSY_VALUES.indexOf(item) < 0){
       result.push(item);
     }
   }
 
+  return result;
 }
 
 console.log(removeFalsy([0, 1, false, 2, '', 3]));
