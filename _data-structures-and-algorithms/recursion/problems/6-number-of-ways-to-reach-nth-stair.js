@@ -19,8 +19,8 @@ function numberOfWays(n) {
 }
 
 function main() {
-  console.log(numberOfWays(4));
-  console.log(numberOfWays(10));
+  console.log(numberOfWays(3));
+  console.log(numberOfWays(5));
 }
 
 main();
