@@ -77,15 +77,44 @@ class LinkedList {
       this.tail = null;
     }
   }
+
+  // >> return the node at that particular index
+  get(index) {
+    // there should be a valid index and it should be a number
+    if (isNaN(index)) {
+      return undefined;
+    }
+
+    // index should fall withing the range of the list
+    if (index < 0 || index > this.length - 1) {
+      return undefined;
+    }
+
+    let currentNode = this.head;
+    for (let i = 0; i < index; i++) {
+      currentNode = currentNode.next;
+    }
+    return currentNode;
+  }
 }
 
 const myLinkedList = new LinkedList();
 myLinkedList.push(4);
 myLinkedList.push(7);
-console.log(myLinkedList);
+myLinkedList.push(5);
+myLinkedList.push(10);
+// console.log(myLinkedList); // 4 -> 7 -> 5 -> 10
 
 console.log("-------------------------");
 
 // myLinkedList.pop();
-myLinkedList.shift();
-console.log(myLinkedList);
+// myLinkedList.shift();
+// console.log(myLinkedList);
+
+console.log(myLinkedList.get(-1)); // undefined
+console.log(myLinkedList.get(-20)); // undefined
+console.log(myLinkedList.get("hello")); // undefined
+
+// console.log(myLinkedList.get(0));
+// console.log(myLinkedList.get(1));
+console.log(myLinkedList.get(3));
