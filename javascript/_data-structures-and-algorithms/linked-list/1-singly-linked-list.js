@@ -96,6 +96,53 @@ class LinkedList {
     }
     return currentNode;
   }
+
+  // >> set the value of the node at particular index to the new value
+  set(index, value) {
+    let node = this.get(index);
+    if (node) {
+      node.value = value;
+      return true;
+    }
+    return false;
+  }
+
+  // >> insert a new node at a particular index
+  insert(index, value) {
+    if (index < 0 || index > this.length - 1) return false;
+    if (index === 0) return this.unshift(value);
+    if (index === this.length - 1) return this.push(value);
+
+    let newNode = new Node(value);
+    const prevNode = this.get(index - 1);
+    newNode.next = prevNode.next;
+    prevNode.next = newNode;
+    this.length = this.length + 1;
+  }
+
+  // >> remove a node at a particular index
+  remove(index) {
+    if (index < 0 || index > this.length - 1) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    let prevNode = this.get(index - 1);
+    let currentNode = prevNode.next;
+
+    prevNode.next = currentNode.next;
+    currentNode.next = null;
+    this.length = this.length - 1;
+
+    return currentNode;
+  }
+
+  // >> reverse a linked list
+  reverse() {
+    // 1. reverse the head and tail nodes
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+  }
 }
 
 const myLinkedList = new LinkedList();
