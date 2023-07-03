@@ -118,6 +118,7 @@ class LinkedList {
     newNode.next = prevNode.next;
     prevNode.next = newNode;
     this.length = this.length + 1;
+    return this;
   }
 
   // >> remove a node at a particular index
