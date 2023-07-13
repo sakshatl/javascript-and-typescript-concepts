@@ -1,4 +1,4 @@
-function skipString(str, targetStr) {
+function removeString(str, targetStr) {
   const helper = (unprocessed, processed) => {
     if (!unprocessed.length) {
       return processed;
@@ -16,8 +16,8 @@ function skipString(str, targetStr) {
 }
 
 function main() {
-  console.log(skipString("you_can_see_hello_will_be_removed", "hello"));
-  console.log(skipString("skipthedogfromthisstring", "dog"));
+  console.log(removeString("you_can_see_hello_will_be_removed", "hello"));
+  console.log(removeString("skipthedogfromthisstring", "dog"));
 }
 
 main();
